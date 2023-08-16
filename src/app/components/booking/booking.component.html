@@ -1,0 +1,2 @@
+  <app-ticket-selection (newNumberEvent)="changeNumber($event)" *ngIf="!numberOfTickets"></app-ticket-selection>
+  <app-ticket-booking [numberOfTickets]=numberOfTickets *ngIf="numberOfTickets"></app-ticket-booking>
