@@ -5,11 +5,14 @@
   <div formArrayName="tickets">
     <div *ngFor="let ticket of ticketsFormArray.controls; let i = index" [formGroupName]="i">
       <h3>Ticket {{ i + 1 }}</h3>
-      <label for="name">Name:</label>
-      <input type="text" id="name" formControlName="name">
-
-      <label for="idNum">ID:</label>
-      <input type="text" id="idNum" formControlName="idNum">
+      <div>
+        <label for="name">Name:</label>
+        <input type="text" id="name" formControlName="name">
+      </div>
+      <div>
+        <label for="idNum">ID:</label>
+        <input type="text" id="idNum" formControlName="idNum">
+      </div>
       <div *ngIf="bookingForm.hasError('duplicateValues', 'tickets')">
         <p class="error-message">Each name must be unique.</p>
       </div>
